@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>vending-machine</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand bg-info text-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
+                <span class="ml-2">vending-machine</span>
+            </a>
+        </nav>
+    </header>
+    <main class="container-fluid bg-dark text-center">
+        <h1 class="text-white pt-4">CODEWORKS VENDING MACHINE</h1>
+        <div class="row text-center mb-4 text-white">
+            <div class="col">
+                <h3>Total: <span id="total">0</span></h3>
+                <button class="btn btn-info" onclick="app.gameController.addQuarter()">Add Quarter</button>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="snacks d-flex">
+                    <div class="snack-item card mr-4">
+                        <img src="./assets/img/item1.png" alt="" class="card-img-top img-fluid">
+                            <div class="card-body bg-info">
+                                <div class="card-title">Snack</div>
+                                <div class="card-text">Cost: $1.50</div>
+                                <button class="btn btn-dark" onclick="app.gameController.buySnack(1)">BUY</button>
+                            </div>
+                    </div>
+                    <div class="snack-item card mr-4">
+                        <img src="./assets/img/item2.png" alt="" class="card-img-top">
+                            <div class="card-body bg-info">
+                                <div class="card-title">Snack</div>
+                                <div class="card-text">Cost $1.00</div>
+                                <button class="btn btn-dark" onclick="app.gameController.buySnack(2)">BUY</button>
+                            </div>
+                    </div>
+                    <div class="snack-item card mr-4">
+                        <img src="./assets/img/item3.png" alt="" class="card-img-top">
+                            <div class="card-body bg-info">
+                                <div class="card-title">Snack</div>
+                                <div class="card-text">Cost $1.25</div>
+                                <button class="btn btn-dark" onclick="app.gameController.buySnack(3)">BUY</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="snacks d-flex mt-4">
+                    <div class="snack-item card mr-4">
+                        <img src="./assets/img/sour.jpeg" alt="" class="card-img-top">
+                            <div class="card-body bg-info">
+                                <div class="card-title">Sour Patch</div>
+                                <div class="card-text">Cost $2.00</div>
+                                <button class="btn btn-dark" onclick="app.gameController.buySnack(4)">BUY</button>
+                            </div>
+                    </div>
+                    <div class="snack-item card mr-4">
+                        <img src="./assets/img/water.jpeg" alt="" class="card-img-top">
+                            <div class="card-body bg-info">
+                                <div class="card-title">Water</div>
+                                <div class="card-text">Cost $1.50</div>
+                                <button class="btn btn-dark" onclick="app.gameController.buySnack(5)">BUY</button>
+                            </div>
+                    </div>
+                    <div class="snack-item card mr-4">
+                        <img src="./assets/img/doritos.png" alt="" class="card-img-top">
+                            <div class="card-body bg-info">
+                                <div class="card-title">Doritos</div>
+                                <div class="card-text">Cost $2.25</div>
+                                <button class="btn btn-dark" onclick="app.gameController.buySnack(6)">BUY</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row text-white pt-3 text-center justify-content-center align-items-center">
+            <div class="col-2">
+                    <h2>CART: </h2>
+            </div>
+            <div class="col-3 d-flex justify-content-start">
+                <ul id="cart"></ul>
+            </div>
+        </div>
+        
+    </main>
+    <footer class="container-fluid bg-dark text-light pt-5">
+        <div class="row text-center">
+            <div class="col">
+                <p><small>Made with love by Codeworks</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
